@@ -10,12 +10,12 @@
 
 <body>
     <h1 class="title">Validación con JavaScript</h1>
+
     <form id="form" action="#" class="form" onsubmit="return validarCampos();">
         <div class="form__field">
             <label for="id_usr" class="form__label">Id Usuario: </label>
             <input type="number" id="id_usr" class="form__input">
         </div>
-
 
         <div class="form__field">
             <label for="id_pais" class="form__label">Id País: </label>
@@ -35,7 +35,6 @@
                 </div>
             </div>
         </div>
-
 
         <div class="form__field">
             <label for="direccion" class="form__label">Dirección: </label>
@@ -84,12 +83,12 @@
         <div class="gustos_personales">
             <div class="form__field">
                 <label for="color" class="form__label">Color favorito: </label>
-                <input class="disabled" type="color" class="form__input" id="color" disabled>
+                <input class="disabled form__input" type="color" id="color" disabled>
             </div>
 
             <div class="form__field">
                 <label for="marcas" class="form__label">Marca de carro favorita: </label>
-                <select class="disabled" disabled name="marcas" id="marcas" class="form__select">
+                <select class="disabled form__select" disabled name="marcas" id="marcas">
                     <option value="" selected disabled>Seleccione una opción</option>
                     <option value="mazda">Mazda</option>
                     <option value="chevrolet">Chevrolet</option>
@@ -101,7 +100,7 @@
 
             <div class="form__field">
                 <label for="estilo" class="form__label">Estilo favorito de carro: </label>
-                <select class="disabled" disabled name="estilo" id="estilo" class="form__select">
+                <select class="disabled form__select" disabled name="estilo" id="estilo">
                     <option value="" selected disabled>Seleccione una opción</option>
                     <option value="deportivo">Deportivo</option>
                     <option value="descapotable">Descapotable</option>
@@ -113,15 +112,17 @@
 
             <div class="form__field">
                 <label for="modelo" class="form__label">¿Cuál es tu modelo de carro favorito?</label>
-                <input class="disabled" type="text" class="form__input" id="modelo" disabled>
+                <input class="disabled form__input" type="text" id="modelo" disabled>
             </div>
 
             <div class="form__field">
-                <label for="precio" class="form__label">¿Cuánto estarías dispuesto a pagar por un vehículo?</label>
+                <label class="form__label">¿Cuánto estarías dispuesto a pagar por un vehículo?</label>
                 <div class="middle">
                     <div class="multi-range-slider">
-                        <input class="disabled" disabled type="range" id="input-left" min="0" max="100000000" value="10000000">
-                        <input class="disabled" disabled type="range" id="input-right" min="0" max="100000000" value="50000000">
+                        <input class="disabled" disabled type="range" id="input-left" min="0" max="100000000"
+                            value="10000000">
+                        <input class="disabled" disabled type="range" id="input-right" min="0" max="100000000"
+                            value="50000000">
                         <div class="slider">
                             <div class="track"></div>
                             <div class="range"></div>
@@ -136,9 +137,8 @@
             <input type="submit" value="Registrarme" class="form__submit">
         </div>
 
-
     </form>
-    <script type="text/javascript" src="scripts.js"></script>
+    <script src="scripts.js"></script>
 </body>
 
 </html>
