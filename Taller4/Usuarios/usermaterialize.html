@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!--Import materialize.css-->
+  <link type="text/css" rel="stylesheet" href="../../materialize/css/materialize.min.css" media="screen,projection" />
+
+  <title>Usuarios - Materialize</title>
+
+  <style>
+    select {
+      border: none;
+      border-bottom: 1px solid #808080;
+      color: #808080;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="nav-wrapper">
+    <h1>Registro de Usuario</h1>
+  </div>
+  
+  <div class="row">
+    <form class="col s12" action="#">
+      <div class="row">
+        <div class="input-field col s12">
+          <input type="number" id="id_usr" minlength="10" maxlength="10" class="validate">
+          <label for="id_usr">Documento de Identidad</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-field col s12">
+          <!-- <label for="id_paises">Id País</label> -->
+          <select class="browser-default" name="id_paises" id="id_paises">
+            <option value="" disabled selected>Id país</option>
+            <option value="111">111</option>
+            <option value="222">222</option>
+            <option value="333">333</option>
+            <option value="444">444</option>
+            <option value="555">555</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-field col s12">
+          <input type="text" id="nombre" maxlength="25" class="validate">
+          <label for="nombre">Nombre</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-field col s12">
+          <input type="text" id="apellido" maxlength="25" class="validate">
+          <label for="apellido">Apellido</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-field col s12">
+          <input type="text" id="direccion" maxlength="45" class="validate">
+          <label for="direccion">Dirección</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-field col s12">
+          <input type="text" id="ccusuario" maxlength="20" class="validate">
+          <label for="ccusuario">Nombre de Usuario</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-field col s12">
+          <input type="password" id="ccpaswd" class="validate">
+          <label for="ccpaswd">Contraseña</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-field col s12">
+          <input type="email" id="email" class="validate">
+          <label for="email">Email</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-field col s12">
+          <input type="tel" id="telefono" class="validate">
+          <label for="telefono">Teléfono</label>
+        </div>
+      </div>
+
+      <button class="btn waves-effect waves-light" type="submit">Registrarme</button>
+    </form>
+  </div>
+
+
+  <!--JavaScript at end of body for optimized loading-->
+  <script type="text/javascript" src="../../materialize/js/materialize.min.js"></script>
+  <!-- <script type="text/javascript" src="script.js"></script> -->
+</body>
+
+</html>

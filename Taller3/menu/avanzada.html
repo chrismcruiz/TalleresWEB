@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grilla Avanzada</title>
+    <style>
+        table {
+            width: 50%;
+        }
+        table, th, td {
+        border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <caption>Personajes de comics</caption>
+        <tbody>
+            <tr>
+                <th rowspan="2">Nombre</th>
+                <th colspan="2">DC</th>
+            </tr>
+            <tr>
+                <th>Identidad secreta</th>
+                <th>Link</th>
+            </tr>
+            <tr>
+                <th>Superman</th>
+                <td>Clark Kent</td>
+                <td><a href="#">dc</a></td>
+            </tr>
+            <tr>
+                <th>Batman</th>
+                <td>Bruce Wayne</td>
+                <td><a href="#">dc</a></td>
+            </tr>
+            <tr>
+                <th rowspan="2">Nombre</th>
+                <th colspan="2">Marvel</th>
+            </tr>
+            <tr>
+                <th>Identidad secreta</th>
+                <th>Link</th>
+            </tr>
+            <tr>
+                <th>Cap America</th>
+                <td>Steve Rogers</td>
+                <td><a href="#">marvel</a></td>
+            </tr>
+            <tr>
+                <th>Spiderman</th>
+                <td>Peter Parker</td>
+                <td><a href="#">marvel</a></td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3">Pie de tabla.</td>
+            </tr>
+        </tfoot>
+    </table>
+    <a href="../menu.html">Volver a menú</a>
+</body>
+</html>

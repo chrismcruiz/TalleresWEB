@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h1 class="title">Validación con JavaScript</h1>
+    <form id="form" action="#" class="form" onsubmit="return validarCampos();">
+        <div class="form__field">
+            <label for="id_usr" class="form__label">Id Usuario: </label>
+            <input type="number" id="id_usr" class="form__input">
+        </div>
+
+
+        <div class="form__field">
+            <label for="id_pais" class="form__label">Id País: </label>
+            <input type="number" id="id_pais" class="form__input">
+
+        </div>
+
+        <div class="form__field">
+            <div class="row">
+                <div class="col-lg-6">
+                    <label for="nombre" class="form__label">Nombres: </label>
+                    <input type="text" id="nombre" class="form__input">
+                </div>
+                <div class="col-lg-6">
+                    <label for="apellido" class="form__label">Apellidos: </label>
+                    <input type="text" id="apellido" class="form__input">
+                </div>
+            </div>
+        </div>
+
+
+        <div class="form__field">
+            <label for="direccion" class="form__label">Dirección: </label>
+            <input type="text" id="direccion" class="form__input">
+        </div>
+
+        <div class="form__field">
+            <label for="username" class="form__label">Usuario: </label>
+            <input type="text" id="username" class="form__input">
+        </div>
+
+        <div class="form__field">
+            <label for="clave" class="form__label">Contraseña: </label>
+            <input type="password" id="clave" class="form__input">
+        </div>
+
+        <div class="form__field">
+            <label for="confirm_clave" class="form__label">Confirmar contraseña: </label>
+            <input type="password" id="confirm_clave" class="form__input">
+        </div>
+
+        <div class="form__field">
+            <label for="email" class="form__label">Email: </label>
+            <input type="email" id="email" class="form__input">
+        </div>
+
+        <div class="form__field">
+            <label for="telefono" class="form__label">Teléfono: </label>
+            <input type="tel" id="telefono" class="form__input">
+        </div>
+
+        <div class="form__field">
+            <label class="form__label">¿Deseas registrar tus gustos?</label>
+            <div class="row">
+                <div class="col-lg-2">
+                    <label for="si" class="form__label">Sí</label>
+                    <input type="radio" value="si" id="si" name="gustos">
+                </div>
+                <div class="col-lg-2">
+                    <label for="no" class="form__label">No</label>
+                    <input type="radio" value="no" id="no" name="gustos" checked>
+                </div>
+            </div>
+        </div>
+
+        <div class="gustos_personales">
+            <div class="form__field">
+                <label for="color" class="form__label">Color favorito: </label>
+                <input class="disabled" type="color" class="form__input" id="color" disabled>
+            </div>
+
+            <div class="form__field">
+                <label for="marcas" class="form__label">Marca de carro favorita: </label>
+                <select class="disabled" disabled name="marcas" id="marcas" class="form__select">
+                    <option value="" selected disabled>Seleccione una opción</option>
+                    <option value="mazda">Mazda</option>
+                    <option value="chevrolet">Chevrolet</option>
+                    <option value="mercedes_benz">Mercedes Benz</option>
+                    <option value="audi">Audi</option>
+                    <option value="renault">Renault</option>
+                </select>
+            </div>
+
+            <div class="form__field">
+                <label for="estilo" class="form__label">Estilo favorito de carro: </label>
+                <select class="disabled" disabled name="estilo" id="estilo" class="form__select">
+                    <option value="" selected disabled>Seleccione una opción</option>
+                    <option value="deportivo">Deportivo</option>
+                    <option value="descapotable">Descapotable</option>
+                    <option value="todoterreno">Todoterreno</option>
+                    <option value="cupe">Cupé</option>
+                    <option value="familiar">Familiar</option>
+                </select>
+            </div>
+
+            <div class="form__field">
+                <label for="modelo" class="form__label">¿Cuál es tu modelo de carro favorito?</label>
+                <input class="disabled" type="text" class="form__input" id="modelo" disabled>
+            </div>
+
+            <div class="form__field">
+                <label for="precio" class="form__label">¿Cuánto estarías dispuesto a pagar por un vehículo?</label>
+                <div class="middle">
+                    <div class="multi-range-slider">
+                        <input class="disabled" disabled type="range" id="input-left" min="0" max="100000000" value="10000000">
+                        <input class="disabled" disabled type="range" id="input-right" min="0" max="100000000" value="50000000">
+                        <div class="slider">
+                            <div class="track"></div>
+                            <div class="range"></div>
+                            <div class="thumb left"></div>
+                            <div class="thumb right"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="submit_container">
+            <input type="submit" value="Registrarme" class="form__submit">
+        </div>
+
+
+    </form>
+    <script type="text/javascript" src="scripts.js"></script>
+</body>
+
+</html>

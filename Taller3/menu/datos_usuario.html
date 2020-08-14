@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datos Usuario</title>
+    <style>
+        .block{
+            display: block;
+        }     
+        .student-data{
+            width: 400px;
+        } 
+    </style>
+</head>
+<body>
+    <h2>Rellena tu CV</h2>
+    <form action="#">
+        <label for="name" class="block">Nombre</label>
+        <input type="text" id="name" required>
+
+        <label for="lastname" class="block">Apellidos</label>
+        <input type="text" id="lastname" required>
+
+        <label for="password" class="block">Contraseña</label>
+        <input type="password" id="password" required>
+
+        <label for="confirm_password" class="block">Confirme Contraseña</label>
+        <input type="password" id="confirm_password" required>
+
+        <label class="block">Identificación</label>
+        <select name="documento">
+            <option value="ti">TI</option>
+            <option value="cc">CC</option>
+        </select>
+        <input type="text" required minlength="10" maxlength="10">
+
+        <label class="block">Sexo</label>
+        <div>
+        <input type="radio" id="man" name="sex">
+        <label for="man">Hombre</label>
+        </div>
+        <div>
+        <input type="radio" id="woman" name="sex">
+        <label for="woman">Mujer</label>
+        </div>
+
+        <label class="block">Incluir mi foto</label>
+        <input type="file">
+
+        <div>
+        <input type="checkbox" id="student">
+        <label for="student">Estudiante...</label>
+        </div>
+        
+        <fieldset class="student-data">
+            <legend>Datos personales</legend>
+
+            <label class="block" for="department">Departamento</label>
+            <select name="departments" id="department">
+                <option value="selecciona">- selecciona -</option>
+                <option value="santander">Santander</option>
+                <option value="cundinamarca">Cundinamarca</option>
+                <option value="choco">Chocó</option>
+            </select>
+
+            <label class="block">Fecha de nacimiento</label>
+            <input type="number" min="1" max="31" placeholder="día" required>
+            de
+            <select>
+                <option value="enero">Enero</option>
+                <option value="febrero">Febrero</option>
+                <option value="marzo">Marzo</option>
+                <option value="abril">Abril</option>
+                <option value="mayo">Mayo</option>
+                <option value="junio">Junio</option>
+                <option value="julio">Julio</option>
+                <option value="agosto">Agosto</option>
+                <option value="septiembre">Septiembre</option>
+                <option value="octubre">Octubre</option>
+                <option value="noviembre">Noviembre</option>
+                <option value="diciembre">Diciembre</option>
+            </select>
+            de
+            <input type="number" min="1910" max="2020" placeholder="año" required>
+           
+
+            <label class="block" for="topics">Temas de interés</label>
+            <select name="topics" id="topics" multiple>
+                <option value="db">Administración de bases de datos</option>
+                <option value="programacion">Análisis y programación</option>
+                <option value="arquitectura">Arquitectura</option>
+                <option value="calidad">Calidad</option>
+                <option value="business">ERP, CRM, Business Intelligence</option>
+            </select>
+        </fieldset>
+        <input type="submit" value="Guardar cambios">
+        <input type="reset" value="Borrar los datos introducidos">
+    </form>
+</body>
+</html>

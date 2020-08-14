@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet" href="../materialize/css/materialize.css">
+
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <form action="" class="col s12">
+                <div class="row card-panel grey lighten-3">
+                    <h1>Registro de Usuarios</h1>
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <input id="nombres" type="text">
+                            <label for="nombres">Nombres:</label>
+                        </div>
+                        <div class="input-field col s6">
+                            <input id="apellidos" type="text">
+                            <label for="apellidos">Apellidos:</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="username" type="text">
+                            <label for="username">Nombre de Usuario:</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col s12">
+                            <label for="borndate">Fecha de Nacimiento</label>
+                            <input type="text" class="datepicker" id="borndate">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="email" type="email">
+                            <label for="email">Correo:</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="phone" type="tel">
+                            <label for="phone">Teléfono:</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <input id="password" type="password">
+                            <label for="password">Contraseña:</label>
+                        </div>
+                        <div class="input-field col s6">
+                            <input id="c-password" type="password">
+                            <label for="c-password">Confirmar Contraseña:</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12 m4">
+                            <select id="paises">
+                                <option value="" disabled selected>-Escoge una opción-</option>
+                                <option value="colombia">Colombia</option>
+                            </select>
+                            <label for="paises">Lugar de Residencia</label>
+                        </div>
+                        <div class="input-field col s12 m4 disabled" id="departamentosContainer">
+                            <select id="departamentos">
+                                <option value="" disabled selected>-Escoge una opción-</option>
+                            </select>
+                            <label for="departamentos" class="disabled">Departamento</label>
+                        </div>
+                        <div class="input-field col s12 m4 disabled" id="municipiosContainer">
+                            <select id="municipios">
+                                <option value="" disabled selected>-Escoge una opción-</option>
+                            </select>
+                            <label for="municipios" class="disabled">Municipio</label>
+                        </div>
+                    </div>
+
+                    <button class="btn waves-effect waves-light" type="submit">Enviar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('select').formSelect();
+        });
+        $(document).ready(function () {
+            $('.datepicker').datepicker();
+        });
+    </script>
+</body>
+
+</html>

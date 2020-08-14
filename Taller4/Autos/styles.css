@@ -1,0 +1,45 @@
+.fondo {
+    background-color: rgb(0, 0, 0);
+    padding: 20px;
+}
+.title {
+    color: rgb(199, 0, 0);
+    text-align: center;
+    text-decoration: underline overline;
+    text-decoration-style: double;
+}
+
+.form {
+    text-align: center;
+}
+.form__label {
+    color: ghostwhite;
+    font-family: cursive;
+    text-shadow: 2px 2px rgb(199, 0, 0);
+}
+
+.form__input {
+    background-color: silver;
+    margin: 4px;
+}
+
+.form__select {
+    background-color: silver;
+    margin: 4px;
+}
+
+.form__textarea {
+    background-color: silver;
+    margin: 4px;
+}
+
+.form__submit {
+    background-color: rgb(199, 0, 0);
+    color: white;
+    text-shadow: 2px 2px black;
+    text-align: center;
+    font-size: 16px;
+    padding: 15px 32px;
+    margin: 8px;
+    cursor: pointer;
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuarios - CSS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h1 class="title">Registro de Usuario</h1>
+    <div class="box">
+        <form action="#" class="form">
+            <div class="form__field">
+                <label for="id_usr" class="form__label">Documento de Identidad</label>
+                <input type="number" id="id_usr" class="form__input" minlength="10" maxlength="10">
+            </div>
+            <div class="form__field">
+                <label for="id_paises" class="form__label">Id País</label>
+                <select name="id_paises" id="id_paises" class="form__select">
+                    <option value="111">111</option>
+                    <option value="222">222</option>
+                    <option value="333">333</option>
+                    <option value="444">444</option>
+                    <option value="555">555</option>
+                </select>
+            </div>
+            <div class="form__field">
+                <label for="nombre" class="form__label">Nombre</label>
+                <input type="text" id="nombre" class="form__input" maxlength="25">
+            </div>
+            <div class="form__field">
+                <label for="apellido" class="form__label">Apellido</label>
+                <input type="text" id="apellido" class="form__input" maxlength="25">
+            </div>
+            <div class="form__field">
+                <label for="direccion" class="form__label">Dirección</label>
+                <input type="text" id="direccion" class="form__input" maxlength="45">
+            </div>
+            <div class="form__field">
+                <label for="ccusuario" class="form__label">Nombre de Usuario</label>
+                <input type="text" id="ccusuario" class="form__input" maxlength="20">
+            </div>
+            <div class="form__field">
+                <label for="ccpaswd" class="form__label">Contraseña</label>
+                <input type="password" id="ccpaswd" class="form__input">
+            </div>
+            <div class="form__field">
+                <label for="email" class="form__label">Email</label>
+                <input type="email" id="email" class="form__input">
+            </div>
+            <div class="form__field">
+                <label for="telefono" class="form__label">Teléfono</label>
+                <input type="tel" id="telefono" class="form__input" min="0">
+            </div>
+            <input type="submit" value="Registrarme" class="form__submit">
+        </form>
+    </div>
+</body>
+
+</html>
