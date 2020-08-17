@@ -103,9 +103,9 @@ valpassword.addEventListener('change', (e) => comparePasswords(e.target.value));
 // Combo enfermedades.
 swc.addEventListener('change', (e) => {
   if (e.target.checked) {
-    swc2.parentElement.parentElement.classList.remove('disabled');
+    swc2.parentElement.classList.remove('disabled');
   } else {
-    swc2.parentElement.parentElement.classList.add('disabled');
+    swc2.parentElement.classList.add('disabled');
     diseases.classList.add('disabled');
     swc2.checked = false;
   }
