@@ -1,67 +1,40 @@
 const paises = document.getElementById('paises');
-const disableds = Array.from(document.querySelectorAll('.disabled'));
-const selectDptos = document.getElementById('departamentos');
-const selectMun = document.getElementById('municipios');
+const selectDptos = document.getElementById('selectDptos');
+const selectMun = document.getElementById('selectMun');
 
-paises.addEventListener('change', (e) => {
-    let xhr = new XMLHttpRequest();
-    xhr.open('GET', 'https://www.datos.gov.co/resource/xdk5-pm3f.json');
-
-    xhr.addEventListener('load', (data) => {
-        const dataJSON = JSON.parse(data.target.response);
-        let dptos = [];
-
-        for (i in dataJSON) {
-            dptos.push(dataJSON[i]['departamento']);
-        }
-
-        let unique = [...new Set(dptos)].sort();
-
-        for (i of unique) {
-            const option = document.createElement('OPTION');
-            option.textContent = i;
-            option.value = `${i.toLowerCase()}`; 
-            selectDptos.appendChild(option);
-        }
-
-        for (let i = 0; i < disableds.length / 2; i++) {
-            disableds[i].classList.remove('disabled');
-        }
-
-        selectDptos.addEventListener('change', (e) => {
-            const dptoselected = selectDptos.value;
-
-            selectMun.length = 1;
-            console.log(selectMun);
-            let muni = [];
-
-            for (i in dataJSON) {
-                if (dataJSON[i].departamento.toLowerCase() == dptoselected) {
-                    muni.push(dataJSON[i].municipio);
-                }
-            }
-            muni.sort();
-            for (i of muni) {
-                const option = document.createElement('OPTION');
-                option.textContent = i;
-                selectMun.appendChild(option);
-                // console.dir(selectMun.options);
-            }
-
-            for (let i = 2; i < disableds.length; i++) {
-                disableds[i].classList.remove('disabled');
-            }
-
-            //Cargar el select municipios con Materialize
-            $(document).ready(function () {
-                $('select').formSelect();
-            });
-        })
-        //Cargar el select departamentos con Materialize
-        $(document).ready(function () {
-            $('select').formSelect();
-        });
+const fillSelects = (data) => {
+  selectDptos.parentElement.classList.remove('disabled');
+  let dptos = [];
+  data.forEach((d) => dptos.push(d.departamento));
+  dptos = [...new Set(dptos)].sort();
+  const fragment = document.createDocumentFragment();
+  dptos.forEach((dpto) => {
+    const option = document.createElement('OPTION');
+    option.textContent = dpto;
+    fragment.append(option);
+  });
+  selectDptos.append(fragment);
+  selectDptos.addEventListener('change', () => {
+    const municipios = [];
+    selectMun.length = 1;
+    selectMun.parentElement.classList.remove('disabled');
+    data.forEach((i) => {
+      if (i.departamento === selectDptos.value) municipios.push(i.municipio);
     });
-    xhr.send();
-})
+    municipios.sort();
+    const fragment2 = document.createDocumentFragment();
+    municipios.forEach((mun) => {
+      const option = document.createElement('OPTION');
+      option.textContent = mun;
+      fragment2.append(option);
+    });
+    selectMun.append(fragment2);
+  });
+};
 
+paises.addEventListener('change', () => {
+  axios({
+    method: 'GET',
+    url: 'https://www.datos.gov.co/resource/xdk5-pm3f.json',
+  }).then((res) => fillSelects(res.data));
+});
